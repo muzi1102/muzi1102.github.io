@@ -1,0 +1,691 @@
+<!doctype html>
+<html class="theme-next   use-motion ">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css"/>
+
+
+
+
+  <link href="//fonts.googleapis.com/css?family=Lato:300,400,700,400italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=0.4.5.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.2" />
+
+
+
+
+
+
+<meta name="description" content="前言好久没有写东西了。原因就是太lazy了。决定从此刻起，时不时的记录一些我最近学的东西或者遇到的难题。毕竟好记性，不如烂笔头。把自己知道了知识写出来，说明你理解的不错，也能加深理解
+——————-这里是分割线————————–
+atom 的介绍在前端的代码编辑器中就我所了解的就有好几种，如sublime,webstrom,EditPlus、NotePad++等等。我们今天要介绍的是由Github">
+<meta property="og:type" content="article">
+<meta property="og:title" content="atom的使用">
+<meta property="og:url" content="http://yoursite.com/2016/04/07/atom的使用/index.html">
+<meta property="og:site_name" content="BeautyLee's blog">
+<meta property="og:description" content="前言好久没有写东西了。原因就是太lazy了。决定从此刻起，时不时的记录一些我最近学的东西或者遇到的难题。毕竟好记性，不如烂笔头。把自己知道了知识写出来，说明你理解的不错，也能加深理解
+——————-这里是分割线————————–
+atom 的介绍在前端的代码编辑器中就我所了解的就有好几种，如sublime,webstrom,EditPlus、NotePad++等等。我们今天要介绍的是由Github">
+<meta property="og:updated_time" content="2016-05-17T07:33:03.786Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="atom的使用">
+<meta name="twitter:description" content="前言好久没有写东西了。原因就是太lazy了。决定从此刻起，时不时的记录一些我最近学的东西或者遇到的难题。毕竟好记性，不如烂笔头。把自己知道了知识写出来，说明你理解的不错，也能加深理解
+——————-这里是分割线————————–
+atom 的介绍在前端的代码编辑器中就我所了解的就有好几种，如sublime,webstrom,EditPlus、NotePad++等等。我们今天要介绍的是由Github">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var CONFIG = {
+    scheme: 'Mist',
+    sidebar: 'post',
+    motion: true
+  };
+</script>
+
+  <title> atom的使用 | BeautyLee's blog </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  <!--[if lte IE 8]>
+  <div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;margin:0 auto;'>
+    <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
+      <img src="http://7u2nvr.com1.z0.glb.clouddn.com/picouterie.jpg" border="0" height="42" width="820"
+           alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today or use other browser ,like chrome firefox safari."
+           style='margin-left:auto;margin-right:auto;display: block;'/>
+    </a>
+  </div>
+<![endif]-->
+  
+
+
+
+
+
+
+  <div class="container one-column page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">BeautyLee's blog</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">Recording life bit by bit</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu ">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-home fa-fw"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-user fa-fw"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-archive fa-fw"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div id="content" class="content">
+          
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                atom的使用
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            发表于
+            <time itemprop="dateCreated" datetime="2016-04-07T23:15:29+08:00" content="2016-04-07">
+              2016-04-07
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp; 分类于
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/tool/" itemprop="url" rel="index">
+                    <span itemprop="name">tool</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        <span itemprop="articleBody"><h3 id="前言">前言</h3><p>好久没有写东西了。原因就是太lazy了。决定从此刻起，时不时的记录一些我最近学的东西或者遇到的难题。毕竟好记性，不如烂笔头。把自己知道了知识写出来，说明你理解的不错，也能加深理解</p>
+<p>——————-这里是分割线————————–</p>
+<h3 id="atom_的介绍">atom 的介绍</h3><p>在前端的代码编辑器中就我所了解的就有好几种，如sublime,webstrom,EditPlus、NotePad++等等。我们今天要介绍的是由Github的程序员们创造的。他们使用目前最先进流行的技术重新打造了一款称为“属于21世纪”的代码编辑器。atom和sublime非常的相似。但是atom是开源的，社区活跃，支持支持插件扩展，可配置性非常高。对于追求主流技术的码农是个非常不错的选择。</p>
+<h3 id="安装">安装</h3><p>Atom 代码编辑器支持 Windows、Mac、Linux 三大桌面平台，完全免费。直接去官网下载即可。</p>
+<h3 id="基本功能介绍及使用">基本功能介绍及使用</h3><h5 id="1：主题选择">1：主题选择</h5><p>在atom的welcom界面选择choose a Theme,这里的主题分为ui(整个界面的颜色)和Syntax(代码的颜色)。<br>我选择的是atom dark。因为我觉得和我之前使用sublime主题相似，有亲切感。编辑器自带几种选择，你要是对这几种都不满意。可以去下载相应主题插件</p>
+<h5 id="2：快捷键">2：快捷键</h5><p>这里介绍windows。其他系统自行查找</p>
+<p>1：ctrl + shift + p 启动，通过命令输入框可以使用任何插件（自带插件和第三方插件）的功能</p>
+<p>2：ctrl+n 新建一个文件（这是我用的最多一个快捷键）</p>
+<p>3：ctrl+f 查找关键字，退出按esc即可</p>
+<p>4：ctrl+g 光标跳转到相应的行</p>
+<p>5：ctrl+l 快速选中一行</p>
+<p>6：ctrl+d 快速选中相同单词</p>
+<h5 id="3：多屏写代码">3：多屏写代码</h5><p>在navbar的View-&gt;panel。选择你要的分屏方式。。想怎么分就怎么分啊</p>
+<h3 id="atom安装插件">atom安装插件</h3><p>1:快捷键ctrl+，或者flie-&gt;settings。</p>
+<p>2:点击Install,</p>
+<p>3：在 Install Packages 下面。选中你要安装的插件（也可以是搜索的结果）。是不是非常简单。我觉得比sublime都好用</p>
+<h3 id="好用的插件">好用的插件</h3><p>atom只所以这么好用是因为它有强大的插件支持。开源，社区活跃。插件层出不穷。这几我来介绍几个我用的插件。正因为这几个插件，我对atom充满好感</p>
+<p><strong>强烈推荐</strong></p>
+<p>1：emment:这是一个神器，快速编码。用sublime text的同学都知道这个插件，我这里就不多说了，如有不了解的，请戳<a href="http://www.w3cplus.com/tools/emmet-cheat-sheet.html" target="_blank" rel="external">http://www.w3cplus.com/tools/emmet-cheat-sheet.html</a></p>
+<p>2： javascript-snippets。js的代码补全插件，非常好用。详细介绍请务必戳<a href="https://atom.io/packages/javascript-snippets" target="_blank" rel="external">https://atom.io/packages/javascript-snippets</a>这里详细介绍了简写的命令。愉快编码的必备啊</p>
+<p>3：highlight-selected 这是文档的介绍Double click on a word to highlight it throughout the open file.双击高亮选中所有单词。详细请戳<a href="https://atom.io/packages/highlight-selected" target="_blank" rel="external">https://atom.io/packages/highlight-selected</a></p>
+<p>4：atom-beautify，(快捷键ctrl+alt+b)这个对于写代码不注重格式的人非常好。美化你代码的格式。这是官方文档介绍：Beautify HTML, CSS, JavaScript, PHP, Python, Ruby, Java, C, C++, C#, Objective-C, CoffeeScript, TypeScript, Coldfusion, and SQL in Atom。详细请戳<a href="https://atom.io/packages/atom-beautify" target="_blank" rel="external">https://atom.io/packages/atom-beautify</a></p>
+<p>5：autoprefixer：写css时由于某些属性要加浏览器内核前缀，自己一个个敲非常麻烦有没有。这个插件就能格尼自动补全。Prefix CSS and SCSS。。详细请戳<a href="https://atom.io/packages/autoprefixer" target="_blank" rel="external">https://atom.io/packages/autoprefixer</a></p>
+<p>6：docblockr：写代码的一个好习惯就是写注释。不写注释一段时间再去看自己的代码。那就是一个悲剧好吗？你会挖槽，挖槽。这是什么，这个又是什么鬼。。哈哈哈！A helper package for writing documentation。。详细请戳<a href="https://atom.io/packages/docblockr" target="_blank" rel="external">https://atom.io/packages/docblockr</a></p>
+<p>7：lint:代码校验工具。规范我们的编码。我用它和linter-eslint配合使用。加上.eslintrc的配置文件</p>
+<p>8： color-picker。颜色取色器。详细请戳<a href="https://atom.io/packages/color-picker" target="_blank" rel="external">https://atom.io/packages/color-picker</a></p>
+<p>9:minimap :就是Sublime右边那一竖块，显示缩小版的代码</p>
+<p>10:git-plus。。好像挺不错的，不过我还没用。我要去试一试。</p>
+<p>11：react和react-snippets:在atom中写es6和react非常爽。。这我也我大爱它的主要原因。详细请戳<a href="https://atom.io/packages/react" target="_blank" rel="external">https://atom.io/packages/react</a>和最重要的<a href="https://orktes.github.io/atom-react/#snippets-list" target="_blank" rel="external">https://orktes.github.io/atom-react/#snippets-list</a> 心情简直不能再愉快。</p>
+<p><strong>装逼必备</strong></p>
+<p>1：这个首选当然是activate-power-mode：简直炫酷。。详细请戳<a href="activate-power-mode">activate-power-mode</a> 亮瞎双眼。哈哈哈</p>
+<p>2:file-icons：有了它每一个文件前面都有个漂亮的图标。。心情愉快。所有安装的插件度可以在navbar的packages中找到</p>
+<h3 id="总结">总结</h3><p>目前就写这么多。有新想法了在补充。。以上都是在表扬atom，那它有缺点没。。当然有。哎哎哎。打开速度和sublime简直不能比好吗？？有时候还卡住。。cpu蹭蹭往上涨。当然也可能是我电脑配置不行。难以言说的痛。不过这些缺点根本不妨碍我爱它。而且我相信它会越开越好。越来越好。。来来来。哈哈哈</p>
+</span>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2015/12/05/javascript的Array/" rel="next" title="javascript的Array">
+                <i class="fa fa-chevron-left"></i> javascript的Array
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/04/09/input的type-file/" rel="prev" title="input的type='file'">
+                input的type='file' <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+        </div>
+
+        
+
+
+        
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+      </div>
+
+      
+        
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" src="/images/default_avatar.jpg" alt="BeautyLee" itemprop="image"/>
+          <p class="site-author-name" itemprop="name">BeautyLee</p>
+        </div>
+        <p class="site-description motion-element" itemprop="description">Recording life bit by bit</p>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">18</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          <div class="site-state-item site-state-categories">
+            
+              <span class="site-state-item-count">6</span>
+              <span class="site-state-item-name">分类</span>
+              
+          </div>
+
+          <div class="site-state-item site-state-tags">
+            
+              <span class="site-state-item-count">0</span>
+              <span class="site-state-item-name">标签</span>
+              
+          </div>
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/muzi1102" target="_blank">
+                  
+                    <i class="fa fa-globe"></i> github
+                  
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/5155864770/profile?rightmod=1&wvr=6&mod=personinfo" target="_blank">
+                  
+                    <i class="fa fa-globe"></i> weibo
+                  
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://www.zhihu.com/people/mu-zi-34-56" target="_blank">
+                  
+                    <i class="fa fa-globe"></i> zhihu
+                  
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc-indicator-top post-toc-indicator">
+            <i class="fa fa-angle-double-up"></i>
+          </div>
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#atom_的介绍"><span class="nav-number">2.</span> <span class="nav-text">atom 的介绍</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装"><span class="nav-number">3.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#基本功能介绍及使用"><span class="nav-number">4.</span> <span class="nav-text">基本功能介绍及使用</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1：主题选择"><span class="nav-number">4.0.1.</span> <span class="nav-text">1：主题选择</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2：快捷键"><span class="nav-number">4.0.2.</span> <span class="nav-text">2：快捷键</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3：多屏写代码"><span class="nav-number">4.0.3.</span> <span class="nav-text">3：多屏写代码</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#atom安装插件"><span class="nav-number">5.</span> <span class="nav-text">atom安装插件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#好用的插件"><span class="nav-number">6.</span> <span class="nav-text">好用的插件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#总结"><span class="nav-number">7.</span> <span class="nav-text">总结</span></a></li></ol></div>
+            
+          </div>
+          <div class="post-toc-indicator-bottom post-toc-indicator">
+            <i class="fa fa-angle-double-down"></i>
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+      
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy;  2015 - 
+  <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="icon-next-heart fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">BeautyLee</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+
+
+      </div>
+    </footer>
+
+    <div class="back-to-top"></div>
+  </div>
+
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  
+
+  
+    
+    
+
+  
+
+
+  
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
+  <script type="text/javascript" src="/js/fancy-box.js?v=0.4.5.2"></script>
+
+
+  <script type="text/javascript" src="/js/helpers.js?v=0.4.5.2"></script>
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
+<script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
+
+<script type="text/javascript" src="/js/motion.js?v=0.4.5.2" id="motion.global"></script>
+
+
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  
+<script type="text/javascript" src="/js/bootstrap.scrollspy.js?v=0.4.5.2" id="bootstrap.scrollspy.custom"></script>
+
+
+<script type="text/javascript" id="sidebar.toc.highlight">
+  $(document).ready(function () {
+    var tocSelector = '.post-toc';
+    var $tocSelector = $(tocSelector);
+    var activeCurrentSelector = '.active-current';
+
+    $tocSelector
+      .on('activate.bs.scrollspy', function () {
+        var $currentActiveElement = $(tocSelector + ' .active').last();
+
+        removeCurrentActiveClass();
+        $currentActiveElement.addClass('active-current');
+
+        $tocSelector[0].scrollTop = $currentActiveElement.position().top;
+      })
+      .on('clear.bs.scrollspy', function () {
+        removeCurrentActiveClass();
+      });
+
+    function removeCurrentActiveClass () {
+      $(tocSelector + ' ' + activeCurrentSelector)
+        .removeClass(activeCurrentSelector.substring(1));
+    }
+
+    function processTOC () {
+      getTOCMaxHeight();
+      toggleTOCOverflowIndicators();
+    }
+
+    function getTOCMaxHeight () {
+      var height = $('.sidebar').height() -
+                   $tocSelector.position().top -
+                   $('.post-toc-indicator-bottom').height();
+
+      $tocSelector.css('height', height);
+
+      return height;
+    }
+
+    function toggleTOCOverflowIndicators () {
+      tocOverflowIndicator(
+        '.post-toc-indicator-top',
+        $tocSelector.scrollTop() > 0 ? 'show' : 'hide'
+      );
+
+      tocOverflowIndicator(
+        '.post-toc-indicator-bottom',
+        $tocSelector.scrollTop() >= $tocSelector.find('ol').height() - $tocSelector.height() ? 'hide' : 'show'
+      )
+    }
+
+    $(document).on('sidebar.motion.complete', function () {
+      processTOC();
+    });
+
+    $('body').scrollspy({ target: tocSelector });
+    $(window).on('resize', function () {
+      if ( $('.sidebar').hasClass('sidebar-active') ) {
+        processTOC();
+      }
+    });
+
+    onScroll($tocSelector);
+
+    function onScroll (element) {
+      element.on('mousewheel DOMMouseScroll', function (event) {
+          var oe = event.originalEvent;
+          var delta = oe.wheelDelta || -oe.detail;
+
+          this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
+          event.preventDefault();
+
+          toggleTOCOverflowIndicators();
+      });
+    }
+
+    function tocOverflowIndicator (indicator, action) {
+      var $indicator = $(indicator);
+      var opacity = action === 'show' ? 1 : 0;
+      $indicator.velocity ?
+        $indicator.velocity('stop').velocity({
+          opacity: opacity
+        }, { duration: 100 }) :
+        $indicator.stop().animate({
+          opacity: opacity
+        }, 100);
+    }
+
+  });
+</script>
+
+<script type="text/javascript" id="sidebar.nav">
+  $(document).ready(function () {
+    var html = $('html');
+    var TAB_ANIMATE_DURATION = 200;
+    var hasVelocity = $.isFunction(html.velocity);
+
+    $('.sidebar-nav li').on('click', function () {
+      var item = $(this);
+      var activeTabClassName = 'sidebar-nav-active';
+      var activePanelClassName = 'sidebar-panel-active';
+      if (item.hasClass(activeTabClassName)) {
+        return;
+      }
+
+      var currentTarget = $('.' + activePanelClassName);
+      var target = $('.' + item.data('target'));
+
+      hasVelocity ?
+        currentTarget.velocity('transition.slideUpOut', TAB_ANIMATE_DURATION, function () {
+          target
+            .velocity('stop')
+            .velocity('transition.slideDownIn', TAB_ANIMATE_DURATION)
+            .addClass(activePanelClassName);
+        }) :
+        currentTarget.animate({ opacity: 0 }, TAB_ANIMATE_DURATION, function () {
+          currentTarget.hide();
+          target
+            .stop()
+            .css({'opacity': 0, 'display': 'block'})
+            .animate({ opacity: 1 }, TAB_ANIMATE_DURATION, function () {
+              currentTarget.removeClass(activePanelClassName);
+              target.addClass(activePanelClassName);
+            });
+        });
+
+      item.siblings().removeClass(activeTabClassName);
+      item.addClass(activeTabClassName);
+    });
+
+    $('.post-toc a').on('click', function (e) {
+      e.preventDefault();
+      var targetSelector = escapeSelector(this.getAttribute('href'));
+      var offset = $(targetSelector).offset().top;
+      hasVelocity ?
+        html.velocity('stop').velocity('scroll', {
+          offset: offset  + 'px',
+          mobileHA: false
+        }) :
+        $('html, body').stop().animate({
+          scrollTop: offset
+        }, 500);
+    });
+
+    // Expand sidebar on post detail page by default, when post has a toc.
+    motionMiddleWares.sidebar = function () {
+      var $tocContent = $('.post-toc-content');
+      if (CONFIG.sidebar === 'post') {
+        if ($tocContent.length > 0 && $tocContent.html().trim().length > 0) {
+          displaySidebar();
+        }
+      }
+    };
+  });
+</script>
+
+
+
+  <script type="text/javascript" src="/js/bootstrap.js"></script>
+
+  
+  
+
+  
+  
+
+</body>
+</html>

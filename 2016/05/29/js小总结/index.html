@@ -1,0 +1,753 @@
+<!doctype html>
+<html class="theme-next   use-motion ">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css"/>
+
+
+
+
+  <link href="//fonts.googleapis.com/css?family=Lato:300,400,700,400italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=0.4.5.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.2" />
+
+
+
+
+
+
+<meta name="description" content="前言今天来写一写，我平时要用到的一些js的一些小东西,如怎么打乱数组的排序。js的冒泡排序等等一些杂乱无章的东西
+———————-萌萌的分割线——————————————-
+数组乱排平常我用的最多的大概是是random()和sort()方法结合。
+var arr = [1,2,3,4,5,6,7,8,9];
+arr.sort(function(a,b){
+  return Math.random(">
+<meta property="og:type" content="article">
+<meta property="og:title" content="js小记录">
+<meta property="og:url" content="http://yoursite.com/2016/05/29/js小总结/index.html">
+<meta property="og:site_name" content="BeautyLee's blog">
+<meta property="og:description" content="前言今天来写一写，我平时要用到的一些js的一些小东西,如怎么打乱数组的排序。js的冒泡排序等等一些杂乱无章的东西
+———————-萌萌的分割线——————————————-
+数组乱排平常我用的最多的大概是是random()和sort()方法结合。
+var arr = [1,2,3,4,5,6,7,8,9];
+arr.sort(function(a,b){
+  return Math.random(">
+<meta property="og:updated_time" content="2016-06-20T11:31:45.138Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="js小记录">
+<meta name="twitter:description" content="前言今天来写一写，我平时要用到的一些js的一些小东西,如怎么打乱数组的排序。js的冒泡排序等等一些杂乱无章的东西
+———————-萌萌的分割线——————————————-
+数组乱排平常我用的最多的大概是是random()和sort()方法结合。
+var arr = [1,2,3,4,5,6,7,8,9];
+arr.sort(function(a,b){
+  return Math.random(">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var CONFIG = {
+    scheme: 'Mist',
+    sidebar: 'post',
+    motion: true
+  };
+</script>
+
+  <title> js小记录 | BeautyLee's blog </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  <!--[if lte IE 8]>
+  <div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;margin:0 auto;'>
+    <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
+      <img src="http://7u2nvr.com1.z0.glb.clouddn.com/picouterie.jpg" border="0" height="42" width="820"
+           alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today or use other browser ,like chrome firefox safari."
+           style='margin-left:auto;margin-right:auto;display: block;'/>
+    </a>
+  </div>
+<![endif]-->
+  
+
+
+
+
+
+
+  <div class="container one-column page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">BeautyLee's blog</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">Recording life bit by bit</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu ">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-home fa-fw"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-user fa-fw"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-archive fa-fw"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div id="content" class="content">
+          
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                js小记录
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            发表于
+            <time itemprop="dateCreated" datetime="2016-05-29T09:49:31+08:00" content="2016-05-29">
+              2016-05-29
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp; 分类于
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/javacript/" itemprop="url" rel="index">
+                    <span itemprop="name">javacript</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        <span itemprop="articleBody"><h3 id="前言">前言</h3><p>今天来写一写，我平时要用到的一些js的一些小东西,如怎么打乱数组的排序。js的冒泡排序等等一些杂乱无章的东西</p>
+<p>———————-萌萌的分割线——————————————-</p>
+<h3 id="数组乱排">数组乱排</h3><p>平常我用的最多的大概是是random()和sort()方法结合。</p>
+<pre><code>var arr = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>,<span class="number">8</span>,<span class="number">9</span>];
+arr.sort(function(a,b){
+  <span class="keyword">return</span> Math.random() &gt; <span class="number">0.5</span> ? -<span class="number">1</span> : <span class="number">1</span>;
+})
+</code></pre><p>然后看到了这篇总结乱排文章<a href="http://www.w3cplus.com/javascript/how-to-randomize-shuffle-a-javascript-array.html" target="_blank" rel="external">http://www.w3cplus.com/javascript/how-to-randomize-shuffle-a-javascript-array.html</a><br>我觉得洗牌算法我该好好看看了</p>
+<h3 id="冒泡（js）">冒泡（js）</h3><pre><code>var a = [<span class="number">34</span>, <span class="number">203</span>, <span class="number">3</span>, <span class="number">746</span>, <span class="number">200</span>, <span class="number">984</span>, <span class="number">198</span>, <span class="number">764</span>, <span class="number">9</span>];
+<span class="function">function <span class="title">bubbleSort</span><span class="params">(a)</span>
+</span>{
+    var swapped;
+    <span class="keyword">do</span> {
+        swapped = <span class="literal">false</span>;
+        <span class="keyword">for</span> (var i=<span class="number">0</span>; i &lt; a.length-<span class="number">1</span>; i++) {
+            <span class="keyword">if</span> (a[i] &gt; a[i+<span class="number">1</span>]) {
+                var temp = a[i];
+                a[i] = a[i+<span class="number">1</span>];
+                a[i+<span class="number">1</span>] = temp;
+                swapped = <span class="literal">true</span>;
+            }
+        }
+    } <span class="keyword">while</span> (swapped);
+}
+
+bubbleSort(a);
+console.<span class="built_in">log</span>(a);
+</code></pre><p>这是之前在谷歌的时候发现的方法。一看发现这个博客写了不少通俗易懂的算法。更多请点击<a href="http://www.stoimen.com/blog/" target="_blank" rel="external">http://www.stoimen.com/blog/</a><br>还有阮一峰的关于快排的介绍<a href="http://www.ruanyifeng.com/blog/2011/04/quicksort_in_javascript.html" target="_blank" rel="external">http://www.ruanyifeng.com/blog/2011/04/quicksort_in_javascript.html</a></p>
+<h3 id="数组排序">数组排序</h3><p>js按顺序排序（升序或降序）我一般使用如下方法</p>
+<pre><code>var arr = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">99</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">59</span>,<span class="number">6</span>,<span class="number">71</span>,<span class="number">8</span>,<span class="number">9</span>];
+arr.sort(function(a,b){
+    <span class="keyword">return</span> a-b;
+})
+console.<span class="built_in">log</span>(arr);
+</code></pre><p>ps:这里是按升序排列。如果降序只需要把a-b改为b-a<br>更多的方法请点击：</p>
+<ul>
+<li><a href="http://www.ghugo.com/javascript-sort-array-objects/" target="_blank" rel="external">http://www.ghugo.com/javascript-sort-array-objects/</a></li>
+<li><a href="http://www.javascriptkit.com/javatutors/arraysort.shtml" target="_blank" rel="external">http://www.javascriptkit.com/javatutors/arraysort.shtml</a></li>
+</ul>
+<h3 id="获取所有孩子节点">获取所有孩子节点</h3><p>平常我使用的是这种方法。当然。方法多种</p>
+<pre><code><span class="function"><span class="keyword">function</span> <span class="title">getChildEle</span>(<span class="params">ele</span>) </span>{
+      <span class="keyword">var</span> childs=[];
+      <span class="keyword">if</span> (!(ele&amp;&amp;ele.nodeType&amp;&amp;ele.nodeType===<span class="number">1</span>)) {
+            <span class="keyword">return</span> <span class="literal">false</span>;
+       }
+       <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>,len= ele.childNodes.length; i &lt; len; i++) {
+           <span class="keyword">if</span> (ele.childNodes[i].nodeType===<span class="number">1</span>) {
+               childs.push(ele.childNodes[i])
+           }
+       }
+       <span class="built_in">console</span>.log(childs);
+</code></pre><p>  }<br>ps:这里需要强调下childNodes和children的区别<a href="http://stackoverflow.com/questions/7935689/what-is-the-difference-between-children-and-childnodes-in-javascript" target="_blank" rel="external">http://stackoverflow.com/questions/7935689/what-is-the-difference-between-children-and-childnodes-in-javascript</a></p>
+<h3 id="数组的去重">数组的去重</h3><pre><code>var arr=[<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">1</span>,<span class="number">1</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">6</span>],
+    arr1=[];
+arr.<span class="built_in">map</span>(function(item){
+    <span class="keyword">if</span> (arr1.indexOf(item)==-<span class="number">1</span>) {
+        arr1.push(item);
+    }
+})
+</code></pre><p>ps:这种方法没有改变原来数组的值。<br>更多方法请点击<a href="http://jszen.com/best-way-to-get-unique-values-of-an-array-in-javascript.7.html" target="_blank" rel="external">http://jszen.com/best-way-to-get-unique-values-of-an-array-in-javascript.7.html</a></p>
+<h3 id="单例模式">单例模式</h3><p>首先看一段代码</p>
+<pre><code>  <span class="keyword">var</span> Singleton=(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>{
+      <span class="keyword">var</span> instance;
+      <span class="function"><span class="keyword">function</span> <span class="title">createInstance</span>(<span class="params"></span>) </span>{
+          <span class="keyword">var</span> object = <span class="keyword">new</span> <span class="built_in">Object</span>(<span class="string">"I am the instance"</span>);
+        <span class="keyword">return</span> object;
+      }
+      <span class="keyword">return</span> {
+          getInstance:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>{
+              <span class="keyword">if</span> (!instance) {
+                  instance=createInstance();
+              }
+              <span class="keyword">return</span> instance;
+          }
+      }
+  })()
+  <span class="function"><span class="keyword">function</span> <span class="title">run</span>(<span class="params"></span>) </span>{
+
+    <span class="keyword">var</span> instance1 = Singleton.getInstance();
+    <span class="keyword">var</span> instance2 = Singleton.getInstance();
+
+    alert(<span class="string">"Same instance? "</span> + (instance1 === instance2));  
+}
+run();
+</code></pre><p>ps:(function(){})()这种方式能避免变量暴露。可能使用return{}暴露出来<br>更多请点击<a href="http://www.dofactory.com/javascript/singleton-design-pattern" target="_blank" rel="external">http://www.dofactory.com/javascript/singleton-design-pattern</a></p>
+<h3 id="结束语">结束语</h3><p>今天就写到这。</p>
+</span>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/05/17/localstorage存储数组/" rel="next" title="localstorage存储数组">
+                <i class="fa fa-chevron-left"></i> localstorage存储数组
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/06/05/记录一些git相关的操作/" rel="prev" title="记录一些git相关的操作">
+                记录一些git相关的操作 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+        </div>
+
+        
+
+
+        
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+      </div>
+
+      
+        
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" src="/images/default_avatar.jpg" alt="BeautyLee" itemprop="image"/>
+          <p class="site-author-name" itemprop="name">BeautyLee</p>
+        </div>
+        <p class="site-description motion-element" itemprop="description">Recording life bit by bit</p>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">18</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          <div class="site-state-item site-state-categories">
+            
+              <span class="site-state-item-count">6</span>
+              <span class="site-state-item-name">分类</span>
+              
+          </div>
+
+          <div class="site-state-item site-state-tags">
+            
+              <span class="site-state-item-count">0</span>
+              <span class="site-state-item-name">标签</span>
+              
+          </div>
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/muzi1102" target="_blank">
+                  
+                    <i class="fa fa-globe"></i> github
+                  
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/5155864770/profile?rightmod=1&wvr=6&mod=personinfo" target="_blank">
+                  
+                    <i class="fa fa-globe"></i> weibo
+                  
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://www.zhihu.com/people/mu-zi-34-56" target="_blank">
+                  
+                    <i class="fa fa-globe"></i> zhihu
+                  
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc-indicator-top post-toc-indicator">
+            <i class="fa fa-angle-double-up"></i>
+          </div>
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数组乱排"><span class="nav-number">2.</span> <span class="nav-text">数组乱排</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#冒泡（js）"><span class="nav-number">3.</span> <span class="nav-text">冒泡（js）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数组排序"><span class="nav-number">4.</span> <span class="nav-text">数组排序</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#获取所有孩子节点"><span class="nav-number">5.</span> <span class="nav-text">获取所有孩子节点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数组的去重"><span class="nav-number">6.</span> <span class="nav-text">数组的去重</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#单例模式"><span class="nav-number">7.</span> <span class="nav-text">单例模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#结束语"><span class="nav-number">8.</span> <span class="nav-text">结束语</span></a></li></ol></div>
+            
+          </div>
+          <div class="post-toc-indicator-bottom post-toc-indicator">
+            <i class="fa fa-angle-double-down"></i>
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+      
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy;  2015 - 
+  <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="icon-next-heart fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">BeautyLee</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+
+
+      </div>
+    </footer>
+
+    <div class="back-to-top"></div>
+  </div>
+
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  
+
+  
+    
+    
+
+  
+
+
+  
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
+  <script type="text/javascript" src="/js/fancy-box.js?v=0.4.5.2"></script>
+
+
+  <script type="text/javascript" src="/js/helpers.js?v=0.4.5.2"></script>
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
+<script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
+
+<script type="text/javascript" src="/js/motion.js?v=0.4.5.2" id="motion.global"></script>
+
+
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  
+<script type="text/javascript" src="/js/bootstrap.scrollspy.js?v=0.4.5.2" id="bootstrap.scrollspy.custom"></script>
+
+
+<script type="text/javascript" id="sidebar.toc.highlight">
+  $(document).ready(function () {
+    var tocSelector = '.post-toc';
+    var $tocSelector = $(tocSelector);
+    var activeCurrentSelector = '.active-current';
+
+    $tocSelector
+      .on('activate.bs.scrollspy', function () {
+        var $currentActiveElement = $(tocSelector + ' .active').last();
+
+        removeCurrentActiveClass();
+        $currentActiveElement.addClass('active-current');
+
+        $tocSelector[0].scrollTop = $currentActiveElement.position().top;
+      })
+      .on('clear.bs.scrollspy', function () {
+        removeCurrentActiveClass();
+      });
+
+    function removeCurrentActiveClass () {
+      $(tocSelector + ' ' + activeCurrentSelector)
+        .removeClass(activeCurrentSelector.substring(1));
+    }
+
+    function processTOC () {
+      getTOCMaxHeight();
+      toggleTOCOverflowIndicators();
+    }
+
+    function getTOCMaxHeight () {
+      var height = $('.sidebar').height() -
+                   $tocSelector.position().top -
+                   $('.post-toc-indicator-bottom').height();
+
+      $tocSelector.css('height', height);
+
+      return height;
+    }
+
+    function toggleTOCOverflowIndicators () {
+      tocOverflowIndicator(
+        '.post-toc-indicator-top',
+        $tocSelector.scrollTop() > 0 ? 'show' : 'hide'
+      );
+
+      tocOverflowIndicator(
+        '.post-toc-indicator-bottom',
+        $tocSelector.scrollTop() >= $tocSelector.find('ol').height() - $tocSelector.height() ? 'hide' : 'show'
+      )
+    }
+
+    $(document).on('sidebar.motion.complete', function () {
+      processTOC();
+    });
+
+    $('body').scrollspy({ target: tocSelector });
+    $(window).on('resize', function () {
+      if ( $('.sidebar').hasClass('sidebar-active') ) {
+        processTOC();
+      }
+    });
+
+    onScroll($tocSelector);
+
+    function onScroll (element) {
+      element.on('mousewheel DOMMouseScroll', function (event) {
+          var oe = event.originalEvent;
+          var delta = oe.wheelDelta || -oe.detail;
+
+          this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
+          event.preventDefault();
+
+          toggleTOCOverflowIndicators();
+      });
+    }
+
+    function tocOverflowIndicator (indicator, action) {
+      var $indicator = $(indicator);
+      var opacity = action === 'show' ? 1 : 0;
+      $indicator.velocity ?
+        $indicator.velocity('stop').velocity({
+          opacity: opacity
+        }, { duration: 100 }) :
+        $indicator.stop().animate({
+          opacity: opacity
+        }, 100);
+    }
+
+  });
+</script>
+
+<script type="text/javascript" id="sidebar.nav">
+  $(document).ready(function () {
+    var html = $('html');
+    var TAB_ANIMATE_DURATION = 200;
+    var hasVelocity = $.isFunction(html.velocity);
+
+    $('.sidebar-nav li').on('click', function () {
+      var item = $(this);
+      var activeTabClassName = 'sidebar-nav-active';
+      var activePanelClassName = 'sidebar-panel-active';
+      if (item.hasClass(activeTabClassName)) {
+        return;
+      }
+
+      var currentTarget = $('.' + activePanelClassName);
+      var target = $('.' + item.data('target'));
+
+      hasVelocity ?
+        currentTarget.velocity('transition.slideUpOut', TAB_ANIMATE_DURATION, function () {
+          target
+            .velocity('stop')
+            .velocity('transition.slideDownIn', TAB_ANIMATE_DURATION)
+            .addClass(activePanelClassName);
+        }) :
+        currentTarget.animate({ opacity: 0 }, TAB_ANIMATE_DURATION, function () {
+          currentTarget.hide();
+          target
+            .stop()
+            .css({'opacity': 0, 'display': 'block'})
+            .animate({ opacity: 1 }, TAB_ANIMATE_DURATION, function () {
+              currentTarget.removeClass(activePanelClassName);
+              target.addClass(activePanelClassName);
+            });
+        });
+
+      item.siblings().removeClass(activeTabClassName);
+      item.addClass(activeTabClassName);
+    });
+
+    $('.post-toc a').on('click', function (e) {
+      e.preventDefault();
+      var targetSelector = escapeSelector(this.getAttribute('href'));
+      var offset = $(targetSelector).offset().top;
+      hasVelocity ?
+        html.velocity('stop').velocity('scroll', {
+          offset: offset  + 'px',
+          mobileHA: false
+        }) :
+        $('html, body').stop().animate({
+          scrollTop: offset
+        }, 500);
+    });
+
+    // Expand sidebar on post detail page by default, when post has a toc.
+    motionMiddleWares.sidebar = function () {
+      var $tocContent = $('.post-toc-content');
+      if (CONFIG.sidebar === 'post') {
+        if ($tocContent.length > 0 && $tocContent.html().trim().length > 0) {
+          displaySidebar();
+        }
+      }
+    };
+  });
+</script>
+
+
+
+  <script type="text/javascript" src="/js/bootstrap.js"></script>
+
+  
+  
+
+  
+  
+
+</body>
+</html>
