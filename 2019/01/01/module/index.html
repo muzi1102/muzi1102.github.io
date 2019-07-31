@@ -51,22 +51,16 @@
 
 
 
-<meta name="description" content="前言说实话，使用git有一段时间了(/(ㄒoㄒ)/~~)。每次用就是那几个命令(push,add,commit,clone)。哎!平时要是要用到其他命令，就去网上查。只对几个命令记得熟。伤感。今天就来写一写我记不太住的命令。晕啊。记性好差劲。(ps:对git命令不熟的可以在命令行敲 git help)
-—————–这里是分割线—————————————————
-删除远程的分支昨天，整一个东西，不小">
+<meta name="description" content="Recording life bit by bit">
 <meta property="og:type" content="article">
-<meta property="og:title" content="记录一些git相关的操作">
-<meta property="og:url" content="http://yoursite.com/2016/06/05/记录一些git相关的操作/index.html">
+<meta property="og:title" content="module.exports/exports和export/export default">
+<meta property="og:url" content="http://yoursite.com/2019/01/01/module/index.html">
 <meta property="og:site_name" content="BeautyLee's blog">
-<meta property="og:description" content="前言说实话，使用git有一段时间了(/(ㄒoㄒ)/~~)。每次用就是那几个命令(push,add,commit,clone)。哎!平时要是要用到其他命令，就去网上查。只对几个命令记得熟。伤感。今天就来写一写我记不太住的命令。晕啊。记性好差劲。(ps:对git命令不熟的可以在命令行敲 git help)
-—————–这里是分割线—————————————————
-删除远程的分支昨天，整一个东西，不小">
-<meta property="og:updated_time" content="2016-06-05T01:51:10.537Z">
+<meta property="og:description" content="Recording life bit by bit">
+<meta property="og:updated_time" content="2019-01-01T10:32:07.687Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="记录一些git相关的操作">
-<meta name="twitter:description" content="前言说实话，使用git有一段时间了(/(ㄒoㄒ)/~~)。每次用就是那几个命令(push,add,commit,clone)。哎!平时要是要用到其他命令，就去网上查。只对几个命令记得熟。伤感。今天就来写一写我记不太住的命令。晕啊。记性好差劲。(ps:对git命令不熟的可以在命令行敲 git help)
-—————–这里是分割线—————————————————
-删除远程的分支昨天，整一个东西，不小">
+<meta name="twitter:title" content="module.exports/exports和export/export default">
+<meta name="twitter:description" content="Recording life bit by bit">
 
 
 
@@ -78,7 +72,7 @@
   };
 </script>
 
-  <title> 记录一些git相关的操作 | BeautyLee's blog </title>
+  <title> module.exports/exports和export/export default | BeautyLee's blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -198,7 +192,7 @@
             
             
               
-                记录一些git相关的操作
+                module.exports/exports和export/export default
               
             
           </h1>
@@ -207,26 +201,11 @@
         <div class="post-meta">
           <span class="post-time">
             发表于
-            <time itemprop="dateCreated" datetime="2016-06-05T08:59:20+08:00" content="2016-06-05">
-              2016-06-05
+            <time itemprop="dateCreated" datetime="2019-01-01T18:32:07+08:00" content="2019-01-01">
+              2019-01-01
             </time>
           </span>
 
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp; 分类于
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/git/" itemprop="url" rel="index">
-                    <span itemprop="name">git</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
           
 
           
@@ -246,26 +225,7 @@
       
 
       
-        <span itemprop="articleBody"><h3 id="前言">前言</h3><p>说实话，使用git有一段时间了(/(ㄒoㄒ)/~~)。每次用就是那几个命令(push,add,commit,clone)。哎!平时要是要用到其他命令，就去网上查。只对几个命令记得熟。伤感。今天就来写一写我记不太住的命令。晕啊。记性好差劲。(ps:对git命令不熟的可以在命令行敲 git help)</p>
-<p>—————–这里是分割线—————————————————</p>
-<h3 id="删除远程的分支">删除远程的分支</h3><p>昨天，整一个东西，不小心搞错的。把一个分支上传到了远程。怎么删除？？不知道啊！那就查吧！<br>看到一条:</p>
-<pre><code>git branch -d branch-<span class="property">name</span>
-</code></pre><p>病急瞎投医。不管三七二十一。先试一试。不成功，发现只是删除的本地对该远程分支的track<br>那正确的方法是什么：</p>
-<pre><code>git push origin <span class="symbol">:branch-name</span>
-</code></pre><p>ps:冒号前面的空格不能少，原理是把一个空分支push到server上，相当于删除该分支(网上这么说)</p>
-<h3 id="删除文件">删除文件</h3><p>不小心把不需要的文件上传的远程了。怎么办？简单。删除撒。这真是一句废话啊。嘻嘻！在git中我们可以通过git rm命令把一个文件删除</p>
-<pre><code>git rm -rf dir
-git add -A
-git <span class="operator"><span class="keyword">commit</span> -<span class="keyword">m</span> <span class="string">"remove dir"</span>
-git push origin <span class="keyword">master</span></span>
-</code></pre><h3 id="使用git_page">使用git page</h3><p>话说，这个东西，简直太棒了。好吗？我的博客用的就是git pages+hexo搭建的。当初糊里糊涂。按照网上的教程来。那个时候对node啥的。一点都不了解。今天说的是利用git pages展示个人的小demo。好像是一个账号只有一个git pages。但是创建仓库。可使用多个git pages。</p>
-<pre><code><span class="bullet">+ </span>1创建一个repo
-<span class="bullet">+ </span>git clone 仓库 url
-<span class="bullet">+ </span>创建一个gh-pages分支。git checkout --orphan gh-pages
-<span class="bullet">+ </span>最后git add,commit,push即可
-</code></pre><p>ps:git checkout的时候后，分支会包含master分支的内容。不想要删除即可。详情请戳<a href="https://help.github.com/articles/creating-project-pages-manually/" target="_blank" rel="external">https://help.github.com/articles/creating-project-pages-manually/</a></p>
-<h3 id="结束语">结束语</h3><p>后期还会添加。。</p>
-</span>
+        <span itemprop="articleBody"></span>
       
     </div>
 
@@ -276,16 +236,16 @@ git push origin <span class="keyword">master</span></span>
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/05/29/js小总结/" rel="next" title="js小记录">
-                <i class="fa fa-chevron-left"></i> js小记录
+              <a href="/2019/01/01/fiddler模拟接口数据延迟/" rel="next" title="fiddler模拟接口数据延迟">
+                <i class="fa fa-chevron-left"></i> fiddler模拟接口数据延迟
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2016/06/05/css居中总结/" rel="prev" title="css居中总结">
-                css居中总结 <i class="fa fa-chevron-right"></i>
+              <a href="/2019/07/31/vscode插件推荐/" rel="prev" title="test">
+                test <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -426,7 +386,7 @@ git push origin <span class="keyword">master</span></span>
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#删除远程的分支"><span class="nav-number">2.</span> <span class="nav-text">删除远程的分支</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#删除文件"><span class="nav-number">3.</span> <span class="nav-text">删除文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用git_page"><span class="nav-number">4.</span> <span class="nav-text">使用git page</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#结束语"><span class="nav-number">5.</span> <span class="nav-text">结束语</span></a></li></ol></div>
+              <p class="post-toc-empty">此文章未包含目录</p>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">
